@@ -1,0 +1,68 @@
+/******EXPLORE DATA******/
+
+SELECT 
+    *
+FROM
+    projectone.`202108-sampsizev0`;
+
+
+
+/********TOTAL NUMBER OF ROWS********/
+
+
+SELECT 
+    COUNT(*) AS id
+FROM
+    `202108-sampsizev0`;
+
+
+
+/******LOOK FOR DISTINCT VALUE IN THE DATA*****/
+
+
+SELECT 
+    DISTINCT member_casual
+FROM
+    `202108-sampsizev0`;
+
+
+
+
+/***MAX RIDE LENGTH ***/
+
+
+SELECT MAX(ride_length)
+FROM `202108-sampsizev0`;
+
+
+
+
+/***MINIMUM RIDE LENGTH***/
+
+
+SELECT MIN(ride_length)
+FROM `202108-sampsizev0`;
+
+
+
+
+/***MEAN VALUE OF RIDE LENGTH***/
+/***NOT SURE WHY THE RESULTS MEAN VALUE CAME OUT
+DIFFFERENT FROM THE ON IN SPREADSHEET***/
+
+
+SELECT AVG(ride_length)
+FROM `202108-sampsizev0`;
+
+
+
+/***CONVERTING THE DECIMAL VALUE OF MEAN RIDE LENGTH 
+TO A HH:MM:SS DATETIME DATATYPE***/
+/***THE MEAN DECIMAL VALUE IS FROM THE SPREADSHEET***/
+
+       
+SELECT SEC_TO_TIME(86400 * 0.0185);
+
+
+
+
